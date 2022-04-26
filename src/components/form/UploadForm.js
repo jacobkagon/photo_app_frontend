@@ -6,12 +6,10 @@ function UploadForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const form = new FormData();
-    // form.append("image", image);
     let data = {};
     data.image = image;
     data.caption = caption;
-    data.category_id = 1;
+    data.category_id = 1; //! we're going to need to pass down the category id as a prop
     const form = new FormData();
     form.append("image", image);
     form.append("caption", caption);
