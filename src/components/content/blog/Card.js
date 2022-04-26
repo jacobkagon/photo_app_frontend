@@ -1,5 +1,6 @@
 import { Image } from "cloudinary-react";
-function Card(post) {
+
+function Card({ post }) {
   return (
     <div>
       {post.map((image) => (

@@ -12,15 +12,8 @@ function Home() {
 
   return (
     <div>
-      {post.map((image) => (
-        <div className="img">
-          {console.log(image)}
-          <img key="{image}" src={image} />
-        </div>
-      ))}
+      <Card post={post} />
     </div>
-
-    //<Card post={post} />
   );
 }
 
