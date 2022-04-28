@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-function UploadForm() {
+function UploadForm(props) {
+  const { updatePosts } = props;
   const [image, setImage] = useState(null);
-  const [caption, setCaption] = useState("hello");
+  const [caption, setCaption] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,12 +15,15 @@ function UploadForm() {
     form.append("image", image);
     form.append("caption", caption);
     form.append("category_id", 1);
-    fetch("http://localhost:3000/api/v1/photos", {
+    fetch("https://don-photo-app-backend.herokuapp.com/api/v1/photos", {
       method: "POST",
       body: form,
     })
       .then((resp) => resp.json())
-      .then((data) => setImage(data));
+      .then((data) => {
+        console.log(data);
+        // updatePosts(data);
+      });
   };
 
   return (
@@ -39,3 +43,8 @@ function UploadForm() {
 }
 
 export default UploadForm;
+
+// function Password(password) {
+// const
+// if password ==
+//}
