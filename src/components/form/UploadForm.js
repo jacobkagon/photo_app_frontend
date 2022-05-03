@@ -28,6 +28,7 @@ function UploadForm(props) {
 
   return (
     <div>
+      <h3>Upload Photo</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="file"

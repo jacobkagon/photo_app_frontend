@@ -22,6 +22,7 @@ function App() {
     <div>
       <h1>Don Ashbrook</h1>
       <UploadForm updatePosts={updatePosts} />
+      <CategoryForm />
       <Home posts={posts} />
       <div></div>
     </div>
