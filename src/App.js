@@ -1,6 +1,6 @@
-import '@/App.css';
-import Home from '@/components/content/Home';
-import UploadForm from '@/components/form/UploadForm';
+import 'App.css';
+import Home from 'components/content/Home';
+import UploadForm from 'components/form/UploadForm';
 
 import React, { useState, useEffect } from 'react';
 
