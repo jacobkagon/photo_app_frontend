@@ -1,6 +1,7 @@
 import 'App.css';
 import Home from 'components/content/Home';
-import UploadForm from 'components/form/UploadForm';
+import Login from 'components/content/Login';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
@@ -23,10 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home posts={posts} />} />
 
-        <Route
-          path='/login'
-          element={<UploadForm updatePosts={updatePosts} />}
-        />
+        <Route path='/login' element={<Login updatePosts={updatePosts} />} />
       </Routes>
     </Router>
   );
