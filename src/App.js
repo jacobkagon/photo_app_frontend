@@ -1,7 +1,8 @@
 import 'App.css';
 import Home from 'components/content/Home';
-import UploadForm from 'components/form/UploadForm';
+import Login from 'components/content/Login';
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -19,13 +20,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Don Ashbrook</h1>
-      <UploadForm updatePosts={updatePosts} />
-      <CategoryForm />
-      <Home posts={posts} />
-      <div></div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home posts={posts} />} />
+
+        <Route path='/login' element={<Login updatePosts={updatePosts} />} />
+      </Routes>
+    </Router>
   );
 }
 

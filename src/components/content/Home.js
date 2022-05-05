@@ -6,6 +6,8 @@ function Home(props) {
 
   return (
     <div>
+      <h1>Don Ashbrook</h1>
+
       <Card post={posts} />
     </div>
   );
