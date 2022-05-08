@@ -7,8 +7,8 @@ function Home(props) {
 
   return (
     <div>
-      <h3>Don Ashbrook</h3>
       <NavBar />
+      <h3>Don Ashbrook</h3>
       {posts.map((image) => (
         <Card image={image} />
       ))}
