@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Form from 'components/form/Form';
 import UserForm from 'components/form/UserForm';
 
-function Login(props) {
+function Admin(props) {
   const { updatePosts } = props;
 
   const [input, setInput] = useState('');
