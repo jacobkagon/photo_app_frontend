@@ -1,12 +1,21 @@
 import 'App.css';
 import Home from 'components/content/Home';
-import Login from 'components/content/Login';
+import Admin from 'components/content/Admin';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import {
+  Link,
+  MakeGenerics,
+  Outlet,
+  ReactLocation,
+  Router,
+  useMatch,
+} from '@tanstack/react-location';
 
 function App() {
   const [posts, setPosts] = useState([]);
+
+  const location = new ReactLocation();
 
   function updatePosts(post) {
     setPosts([...posts, post]);
@@ -15,18 +24,17 @@ function App() {
   useEffect(() => {
     fetch('https://don-photo-app-backend.herokuapp.com/api/v1/photos')
       .then((resp) => resp.json())
-      //.then((data) => console.log(data))
       .then((data) => setPosts(data));
   }, []);
 
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home posts={posts} />} />
-
-        <Route path='/login' element={<Login updatePosts={updatePosts} />} />
-      </Routes>
-    </Router>
+    <Router
+      location={location}
+      routes={[
+        { path: '/', element: <Home posts={posts} /> },
+        { path: '/admin', element: <Admin updatePosts={updatePosts} /> },
+      ]}
+    />
   );
 }
 
