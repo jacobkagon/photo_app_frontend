@@ -9,6 +9,7 @@ import { ReactLocation, Router } from '@tanstack/react-location';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const location = new ReactLocation();
 
