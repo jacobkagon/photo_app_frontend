@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Form from 'components/form/Form';
 import UserForm from 'components/form/UserForm';
+import NavBar from 'components/content/NavBar';
 
 function Admin(props) {
   const { updatePosts } = props;
@@ -20,6 +21,7 @@ function Admin(props) {
 
   return (
     <div>
+      <NavBar />
       {localStorage.getItem('admin') === 'true' ? (
         <Form updatePosts={updatePosts} />
       ) : (

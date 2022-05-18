@@ -44,7 +44,11 @@ function UploadForm({ state, updatePosts }) {
     <div>
       <h3>Upload Photo</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <select onChange={(e) => setCategoryId(e.target.value)}>
+        <select
+          name='categories'
+          onChange={(e) => setCategoryId(e.target.value)}
+        >
+          <option value='none'>Select a Category</option>
           {categories.map((category) => (
             <option value={category.id}>{category.name}</option>
           ))}
