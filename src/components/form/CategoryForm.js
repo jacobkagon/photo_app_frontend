@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-function CategoryForm() {
+function CategoryForm(props) {
+  const { changeState } = props;
   const [categoryName, setCategoryName] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = {
-      name: categoryName,
-    };
+    const form = new FormData();
+    form.append('name', categoryName);
     fetch('https://don-photo-app-backend.herokuapp.com/api/v1/categories', {
       method: 'POST',
       body: form,
-    });
+    })
+      .then((resp) => resp.json())
+      .then(setCategoryName(''))
+      .then(changeState('updated'));
   };
 
   return (
@@ -19,7 +22,8 @@ function CategoryForm() {
       <h3>Add Category:</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
-          placeholder='Africa 2017'
+          value={categoryName}
+          placeholder='Category Name'
           type='text'
           onChange={(event) => setCategoryName(event.target.value)}
         />

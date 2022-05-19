@@ -1,43 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-function UploadForm(props) {
-  const { updatePosts } = props;
+function UploadForm({ state, updatePosts }) {
   const [image, setImage] = useState(null);
-  const [caption, setCaption] = useState("");
+  const [caption, setCaption] = useState('');
+  const [categories, setCategories] = useState([]);
+  const [categoryId, setCategoryId] = useState('');
+
+  useEffect(() => {
+    fetch('https://don-photo-app-backend.herokuapp.com/api/v1/categories').then(
+      (resp) => resp.json().then((data) => setCategories(data))
+    );
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let data = {};
-    data.image = image;
-    data.caption = caption;
-    data.category_id = 1; //! we're going to need to pass down the category id as a prop
-    const form = new FormData();
-    form.append("image", image);
-    form.append("caption", caption);
-    form.append("category_id", 1);
-    fetch("https://don-photo-app-backend.herokuapp.com/api/v1/photos", {
-      method: "POST",
-      body: form,
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        // updatePosts(data);
-      });
+    if (categoryId !== null) {
+      const form = new FormData();
+      form.append('image', image);
+      form.append('caption', caption);
+      form.append('category_id', categoryId);
+      fetch('https://don-photo-app-backend.herokuapp.com/api/v1/photos', {
+        method: 'POST',
+        body: form,
+      })
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log(data);
+          //updatePosts(data);
+        });
+    } else {
+      window.alert('Please choose a category first');
+    }
+  };
+
+  const handleCategoryId = (e) => {
+    if (e.target.value !== null) {
+      setCategoryId(e.target.value);
+    } else {
+    }
   };
 
   return (
     <div>
       <h3>Upload Photo</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
+        <select
+          name='categories'
+          onChange={(e) => setCategoryId(e.target.value)}
+        >
+          <option value='none'>Select a Category</option>
+          {categories.map((category) => (
+            <option value={category.id}>{category.name}</option>
+          ))}
+        </select>
         <input
-          type="file"
-          accept="image/jpeg"
-          name="image"
+          type='file'
+          accept='image/jpeg'
+          name='image'
           multiple={false}
           onChange={(event) => setImage(event.target.files[0])}
         />
-        <button type="submit">Submit</button>
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );

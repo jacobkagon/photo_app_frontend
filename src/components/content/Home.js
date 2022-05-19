@@ -11,7 +11,6 @@ function Home() {
 
   return (
     <div>
-      {console.log(posts.data)}
       <NavBar />
       {posts.data.map((image) => (
         <Card image={image} />

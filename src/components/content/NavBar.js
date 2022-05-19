@@ -1,15 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import 'navbar.css';
+import 'navbar.scss';
 
 function NavBar() {
-  const [categories, setCategories] = useState([]);
-
+  const [categoryList, setCategoryList] = useState([]);
+  const fetchCategories = () => {
+    fetch('https://don-photo-app-backend.herokuapp.com/api/v1/categories').then(
+      (resp) => resp.json().then((data) => setCategoryList(data))
+    );
+  };
   return (
-    <div class='navbar'>
-      <a class='item'>Home</a>
-      <a class='item'>Photography</a>
-      <a class='item'>About</a>
-    </div>
+    <nav role='navigation' class='primary-navigation'>
+      <ul>
+        <li>
+          <a href='/'>Home</a>
+        </li>
+        <li>
+          <a onMouseOver={fetchCategories} href='#'>
+            Photography
+          </a>
+
+          <ul class='dropdown'>
+            {categoryList
+              ? categoryList.map((category) => (
+                  <li>
+                    <a href='#'>{category.name}</a>
+                  </li>
+                ))
+              : null}
+          </ul>
+        </li>
+        <li>
+          <a href='#'>About</a>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
