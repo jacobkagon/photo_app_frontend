@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Card from 'components/content/blog/Card';
-import NavBar from 'components/content/NavBar';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import Card from 'components/content/blog/Card/Card';
+import NavBar from 'components/content/NavBar/NavBar';
 import { useMatch } from '@tanstack/react-location';
 
-import '../../styles/home.scss';
+import './home.scss';
 
 function Home() {
   const {

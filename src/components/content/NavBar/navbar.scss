@@ -1,5 +1,4 @@
 nav {
-  // height: 5%;
   &.primary-navigation {
     margin: 0 auto;
     display: block;
@@ -7,7 +6,6 @@ nav {
     position: fixed; 
     top: 0; 
     width: 100%; 
-    // min-height: 70px;
 
     z-index: 1;
 
@@ -49,18 +47,6 @@ nav {
       background: white;
     }
 
-    // .dropdown:hover li {
-    //   visibility: visible;
-    //   opacity: 1;
-    //   transition: opacity 1000ms;
-    //   transition-delay: 0ms;
-    //   display: block;
-    //   min-width: 250px;
-    //   text-align: left;
-    //   padding-top: 20px;
-    //   box-shadow: 0px 3px 5px -1px #ccc;
-    // }
-
     ul li:hover > ul,
     ul li ul:hover {
       visibility: visible;
@@ -101,7 +87,7 @@ a {
  
 }
 
-//  ul li ul li a { transition: all 0.5s ease; }
+ul li ul li a { transition: all 0.5s ease; }
 
 
 

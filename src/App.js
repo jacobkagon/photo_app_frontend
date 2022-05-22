@@ -1,8 +1,7 @@
 import 'App.css';
-import Home from 'components/content/Home';
+import Home from 'components/content/Home/Home';
 import Admin from 'components/content/Admin';
 import axios from 'axios';
-import ReactDOM from 'react-dom';
 
 import React, { useState } from 'react';
 import { ReactLocation, Router } from '@tanstack/react-location';

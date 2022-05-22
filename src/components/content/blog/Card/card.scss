@@ -14,9 +14,9 @@
 
   @media (min-width: 768px) {
 
-    transition: transform 500ms;
+    transition: transform 500ms linear;
     object-fit: contain;
-    filter: grayscale(1);
+    filter: grayscale(0);
   }
 }
 
@@ -35,8 +35,9 @@
 
   @media (min-width: 768px) {
 
-    transform: scale(1.2);
-    filter: grayscale(0);
+    transform: scale(1.05);
+    filter: grayscale(1);
+    
   }
 }
 

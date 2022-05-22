@@ -1,5 +1,5 @@
 import { Image } from 'cloudinary-react';
-import '../../../styles/card.scss';
+import './card.scss';
 function Card(props) {
   const { image } = props;
   return ( 

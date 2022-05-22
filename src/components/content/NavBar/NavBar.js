@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/navbar.scss';
+import './navbar.scss';
 
 function NavBar() {
   const [categoryList, setCategoryList] = useState([]);
