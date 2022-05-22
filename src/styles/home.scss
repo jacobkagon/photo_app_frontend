@@ -1,0 +1,62 @@
+.main {
+  height: 100%;
+  position: relative;
+}
+
+
+.images_container {
+
+  // width: 20%;
+  // height: 25%;
+  padding-top: 70px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  column-gap: 1px;
+
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    row-gap: 50px;
+  }
+  
+  // @media (min-width: 768px) {
+  //   padding-top: 5%;
+  //   overflow: hidden;
+
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  //   gap: 8px;
+
+    // grid-template-areas:
+    //     'one one two three'
+    //     'one one six six'
+    //     'four five six six';
+    //   grid-template-columns: 1fr 1fr 1fr 1fr;
+    //   align-content: end;
+
+    //   .wrapper:nth-child(6n+1) {
+    //     grid-area: one;
+    //   }
+    //   .wrapper:nth-child(6n+2) {
+    //     grid-area: two;
+    //   }
+    //   .wrapper:nth-child(6n+3) {
+    //     grid-area: three;
+    //   }
+    //   .wrapper:nth-child(6n+4) {
+    //     grid-area: four;
+    //   }
+    //   .wrapper:nth-child(6n+5) {
+    //     grid-area: five;
+    //   }
+    //   .wrapper:nth-child(6n+6) {
+    //     grid-area: six;
+    //   }
+  // }
+
+}
