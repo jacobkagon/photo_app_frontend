@@ -7,6 +7,8 @@ nav {
     top: 0; 
     width: 100%; 
 
+    z-index: 1;
+
     ul li {
       overflow: visible;
       list-style: none;
@@ -36,8 +38,10 @@ nav {
     ul li ul {
       visibility: hidden;
       opacity: 0;
+      transition: opacity 4000ms;
+      transition-delay: 3000ms;
       position: absolute;
-padding-left: 0;
+      padding-left: 0;
       left: 0;
       display: none;
       background: white;
@@ -47,6 +51,8 @@ padding-left: 0;
     ul li ul:hover {
       visibility: visible;
       opacity: 1;
+      transition: opacity 1000ms;
+      transition-delay: 0ms;
       display: block;
       min-width: 250px;
       text-align: left;
@@ -62,17 +68,18 @@ padding-left: 0;
       border-style: none;
     }
 
-    ul li ul li a:hover {
-      padding-left: 10px;
-      border-left: 2px solid #669933;
-      transition: all 0.3s ease;
-    }
+    // ul li ul li a:hover {
+    //   padding-left: 10px;
+    //   border-left: 2px solid #669933;
+    //   transition: all 0.3s ease;
+    // }
   }
 }
 
 a {
 
     text-decoration: none;
+    will-change: transform;
 
     &:hover {
         color: #669933;
@@ -80,7 +87,7 @@ a {
  
 }
 
- ul li ul li a { transition: all 0.5s ease; }
+ul li ul li a { transition: all 0.5s ease; }
 
 
 

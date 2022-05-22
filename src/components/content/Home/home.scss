@@ -1,0 +1,22 @@
+.main {
+  height: 100%;
+  position: relative;
+}
+
+
+.images_container {
+
+  padding-top: 70px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  column-gap: 1px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    row-gap: 50px;
+  }
+}
