@@ -30,7 +30,7 @@ function NavBar() {
           </ul>
         </li>
         <li>
-          <a href='#'>About</a>
+          <a href='about'>About</a>
         </li>
       </ul>
     </nav>

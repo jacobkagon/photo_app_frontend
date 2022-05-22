@@ -1,0 +1,27 @@
+.picture {
+  float: right;
+  margin-left: 6px;
+ width: 45%;
+}
+
+.container {
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+/* <div className="mb-8 leading-6 prose text-gray-600 dark:text-gray-200"> */
+  
+.secondary {
+  margin-bottom: 2rem;
+}
+
+
+
+.header {
+  color:  #669933;
+  font: bold;
+  margin-bottom: 1rem;
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  letter-spacing: -0.025em;
+}

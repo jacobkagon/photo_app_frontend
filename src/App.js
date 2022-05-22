@@ -1,6 +1,7 @@
 import 'App.css';
 import Home from 'components/content/Home/Home';
 import Admin from 'components/content/Admin';
+import About from 'components/content/blog/About';
 import axios from 'axios';
 
 import React, { useState } from 'react';
@@ -37,6 +38,7 @@ function App() {
           },
         },
         { path: '/admin', element: <Admin updatePosts={updatePosts} /> },
+        { path: 'about', element: <About /> },
       ]}
     />
   );
