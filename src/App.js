@@ -1,7 +1,7 @@
 import 'App.css';
-import Home from 'components/content/Home/Home';
-import Admin from 'components/content/Admin';
-import About from 'components/content/blog/About';
+import Home from 'components/Content/Home/Home';
+import Admin from 'components/Content/Admin';
+import About from 'components/Content/About/About';
 import axios from 'axios';
 
 import React, { useState } from 'react';
