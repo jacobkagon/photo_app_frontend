@@ -11,12 +11,12 @@ function Home() {
   } = useMatch();
 
   return (
-    <div className='main'>
+    <div className="main">
       <NavBar />
-      <div className='images_container'>
-        {posts.data.map((image, idx) => (
-          <Card image={image} key={idx} />
-        ))}
+      <div className="images_container">
+      {posts.data.map((image) => (
+        <Card image={image} />
+      ))}
       </div>
     </div>
   );
