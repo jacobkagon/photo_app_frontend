@@ -3,9 +3,9 @@ nav {
     margin: 0 auto;
     display: block;
     background-color: white;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     z-index: 1;
 
@@ -14,7 +14,7 @@ nav {
       list-style: none;
       margin: 0 auto;
       font-size: 1.2rem;
-     
+
       display: inline-block;
       padding: 0.5rem;
       position: relative;
@@ -77,17 +77,14 @@ nav {
 }
 
 a {
+  text-decoration: none;
+  will-change: transform;
 
-    text-decoration: none;
-    will-change: transform;
-
-    &:hover {
-        color: #669933;
-    }
- 
+  &:hover {
+    color: #669933;
+  }
 }
 
-ul li ul li a { transition: all 0.5s ease; }
-
-
-
+ul li ul li a {
+  transition: all 0.5s ease;
+}

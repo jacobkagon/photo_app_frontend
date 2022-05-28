@@ -1,11 +1,10 @@
-import { Image } from 'cloudinary-react';
 import './card.scss';
 function Card(props) {
   const { image } = props;
-  return ( 
+  return (
     <div className='wrapper'>
-      <a href='/' class='thumbnail-wrapper'>
-        <img key='{image}' src={image} className='thumbnail'/>
+      <a href='/' className='thumbnail-wrapper'>
+        <img key='{image}' src={image} alt={image} className='thumbnail' />
       </a>
     </div>
   );

@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import UploadForm from 'components/form/UploadForm';
 import CategoryForm from 'components/form/CategoryForm';
+import UploadForm from 'components/form/UploadForm';
 
 function Form(props) {
   const [state, changeState] = useState('');
