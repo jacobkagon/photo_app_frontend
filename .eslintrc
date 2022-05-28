@@ -17,7 +17,8 @@
     "prettier"
   ],
   "rules": {
-    "no-console": "warn",
+    "no-console": "off",
+    "react/prop-types": 0,
 
     "simple-import-sort/exports": "warn",
     "simple-import-sort/imports": [

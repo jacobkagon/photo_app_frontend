@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+import NavBar from 'components/content/NavBar/NavBar';
 import Form from 'components/form/Form';
 import UserForm from 'components/form/UserForm';
-import NavBar from 'components/content/NavBar/NavBar';
 
 function Admin(props) {
   const { updatePosts } = props;
 
   const [input, setInput] = useState('');
-  const [validPassword, setValidPassword] = useState(false);
+  const [, setValidPassword] = useState(false);
 
   const passwordMatch = (e) => {
     e.preventDefault();

@@ -1,9 +1,8 @@
 .wrapper {
   overflow: hidden;
   will-change: transform;
-  
+
   @media (min-width: 768px) {
-    
     width: 20%;
     max-height: 500px;
   }
@@ -13,7 +12,6 @@
   width: 100%;
 
   @media (min-width: 768px) {
-
     transition: transform 500ms linear;
     object-fit: contain;
     filter: grayscale(0);
@@ -32,15 +30,11 @@
   background-color: fade(black, 10);
 } */
 .thumbnail-wrapper:hover .thumbnail {
-
   @media (min-width: 768px) {
-
     transform: scale(1.05);
     filter: grayscale(1);
-    
   }
 }
-
 
 /* img {
   max-width: 100%;

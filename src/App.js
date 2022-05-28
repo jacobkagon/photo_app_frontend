@@ -1,14 +1,15 @@
-import 'App.css';
-import Home from 'components/content/Home/Home';
-import Admin from 'components/content/Admin';
+import { useState } from 'react';
+
+import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
-import React, { useState } from 'react';
-import { ReactLocation, Router } from '@tanstack/react-location';
+import Admin from 'components/content/Admin';
+import Home from 'components/content/Home/Home';
+
+import 'App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [categories, setCategories] = useState([]);
 
   const location = new ReactLocation();
 

@@ -28,6 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
+    "lint:fix": "eslint src --fix && npm run format",
     "lint:check": "eslint --max-warnings=0 src",
     "format": "prettier -w .",
     "format:check": "prettier -c ."
