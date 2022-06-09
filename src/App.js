@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
-import About from 'components/Content/About/About';
-import Admin from 'components/Content/Admin';
-import Home from 'components/Content/Home/Home';
+import About from 'components/content/About/About';
+import Admin from 'components/content/Admin';
+import Home from 'components/content/Home/Home';
 
 import 'App.css';
 import 'App.css';
