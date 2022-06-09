@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
+import About from 'components/content/About/About';
 import Admin from 'components/content/Admin';
 import Home from 'components/content/Home/Home';
 
+import 'App.css';
 import 'App.css';
 
 function App() {
@@ -38,6 +40,7 @@ function App() {
           },
         },
         { path: '/admin', element: <Admin updatePosts={updatePosts} /> },
+        { path: 'about', element: <About /> },
       ]}
     />
   );

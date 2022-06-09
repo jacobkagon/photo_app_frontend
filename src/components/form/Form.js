@@ -12,9 +12,6 @@ function Form(props) {
       <h2>Welcome Uncle Don!</h2>
       <UploadForm state={state} updatePosts={updatePosts} />
       <CategoryForm changeState={changeState} />
-      <form>
-        <input type='submit' value='Submit'></input>
-      </form>
     </div>
   );
 }
