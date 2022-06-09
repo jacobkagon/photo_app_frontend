@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function UploadForm({ state, updatePosts }) {
+function UploadForm() {
   const [image, setImage] = useState(null);
-  const [caption, setCaption] = useState('');
+  const [caption] = useState('');
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState('');
 
@@ -25,7 +25,7 @@ function UploadForm({ state, updatePosts }) {
       })
         .then((resp) => resp.json())
         .then((data) => {
-          console.log(data);
+          console.info(data);
           //updatePosts(data);
         });
     } else {
@@ -33,12 +33,12 @@ function UploadForm({ state, updatePosts }) {
     }
   };
 
-  const handleCategoryId = (e) => {
-    if (e.target.value !== null) {
-      setCategoryId(e.target.value);
-    } else {
-    }
-  };
+  // const handleCategoryId = (e) => {
+  //   if (e.target.value !== null) {
+  //     setCategoryId(e.target.value);
+  //   } else {
+  //   }
+  // };
 
   return (
     <div>
@@ -49,8 +49,10 @@ function UploadForm({ state, updatePosts }) {
           onChange={(e) => setCategoryId(e.target.value)}
         >
           <option value='none'>Select a Category</option>
-          {categories.map((category) => (
-            <option value={category.id}>{category.name}</option>
+          {categories.map((category, index) => (
+            <option value={category.id} key={index}>
+              {category.name}
+            </option>
           ))}
         </select>
         <input

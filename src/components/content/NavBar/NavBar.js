@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState } from 'react';
+
 import './navbar.scss';
 
 function NavBar() {
@@ -9,20 +11,20 @@ function NavBar() {
     );
   };
   return (
-    <nav role='navigation' class='primary-navigation'>
+    <nav role='navigation' className='primary-navigation'>
       <ul>
         <li>
           <a href='/'>Home</a>
         </li>
         <li>
-          <a onMouseOver={fetchCategories} href='#'>
+          <a onMouseOver={fetchCategories} onFocus href='#'>
             Photography
           </a>
 
-          <ul class='dropdown'>
+          <ul className='dropdown'>
             {categoryList
-              ? categoryList.map((category) => (
-                  <li>
+              ? categoryList.map((category, index) => (
+                  <li key={index}>
                     <a href='#'>{category.name}</a>
                   </li>
                 ))
