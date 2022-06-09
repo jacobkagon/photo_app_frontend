@@ -11,7 +11,7 @@ function Home() {
   } = useMatch();
 
   return (
-    <div className='main ml-7 mr-7 sm:ml-0 md:mr-0'>
+    <div className='main ml-7 mr-7 md:mr-0'>
       <NavBar />
       <div className='images_container'>
         {posts.data.map((image, index) => (

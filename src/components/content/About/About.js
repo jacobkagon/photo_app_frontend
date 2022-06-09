@@ -1,6 +1,7 @@
-import NavBar from 'components/Content/NavBar/NavBar';
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
+
+import NavBar from 'components/Content/NavBar/NavBar';
 
 function About() {
   return (
@@ -15,12 +16,11 @@ function About() {
             <img alt='' src='/images/don_ashbrook.jpg' />
           </div>
           <p>
-            Hi, I'm Don. I am an avid photographer from Southern California when
-            I get a break my day job.{' '}
+            Hi, I&apos;m Don. I am an avid photographer from Southern California
+            when I get a break my day job.
           </p>
 
           <p className='mt-4'>
-            {' '}
             I have been fortunate to travel extensively around the world for
             work and try to always make some time to learn more about the people
             and places in the countries I visit. Over the years I have also
@@ -32,11 +32,10 @@ function About() {
             Hawaii photographing lava, visiting our beautiful national parks, or
             photographing Sandhill Cranes on a cold winter morning, every trip
             is a challenge and a new adventure.
-            {console.log('My nephew, Jacob is the best!')}
           </p>
         </div>
       </div>
-      <h3 className='mt-12 text-xl text-gray-600'>Let's Connect!</h3>
+      <h3 className='mt-12 text-xl text-gray-600'>Let&apos;s Connect!</h3>
       <div className='flex flex-wrap gap-y-4 gap-x-8'>
         <div className='inline-flex flex-wrap items-center mt-5 gap-y-4 gap-x-8 w-36'>
           <a
