@@ -6,6 +6,7 @@ import NavBar from 'components/content/NavBar/NavBar';
 import './home.scss';
 
 function Home() {
+  //change routes back for testing
   const {
     data: { posts },
   } = useMatch();
