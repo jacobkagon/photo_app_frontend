@@ -1,23 +1,23 @@
-import { useState } from 'react';
+//import { useState } from 'react';
 
 import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
 import About from 'components/Content/about/About';
-import Admin from 'components/Content/admin/Admin';
+//import Admin from 'components/Content/admin/Admin';
 import Home from 'components/Content/home/Home.js';
 
 import 'App.css';
 import 'App.css';
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  //const [posts, setPosts] = useState([]);
 
   const location = new ReactLocation();
 
-  function updatePosts(post) {
-    setPosts([...posts, post]);
-  }
+  // function updatePosts(post) {
+  //   setPosts([...posts, post]);
+  // }
 
   async function fetchPosts() {
     await new Promise((r) => setTimeout(r, 300));
@@ -39,7 +39,7 @@ function App() {
             };
           },
         },
-        { path: '/admin', element: <Admin updatePosts={updatePosts} /> },
+        //{ path: '/admin', element: <Admin updatePosts={updatePosts} /> },
         { path: 'about', element: <About /> },
       ]}
     />
