@@ -1,3 +1,4 @@
+//we may want to get rid of admin page
 //import { useState } from 'react';
 
 import { ReactLocation, Router } from '@tanstack/react-location';
