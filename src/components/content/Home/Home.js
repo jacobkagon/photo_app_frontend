@@ -1,7 +1,7 @@
 import { useMatch } from '@tanstack/react-location';
 
-import Card from 'components/Content/blog/card/Card';
-import NavBar from 'components/Content/navBar/NavBar';
+import Card from 'components/content/blog/Card/Card';
+import NavBar from 'components/content/NavBar/NavBar';
 
 import './home.scss';
 
