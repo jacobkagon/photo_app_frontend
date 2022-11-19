@@ -4,7 +4,7 @@ import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
 import About from 'components/Content/about/About';
-import Admin from 'components/Content/Admin';
+import Admin from 'components/Content/Admin.js';
 import Home from 'components/Content/home/Home.js';
 
 import 'App.css';
