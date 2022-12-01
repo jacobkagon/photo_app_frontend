@@ -6,17 +6,20 @@ import NavBar from 'components/content/NavBar/NavBar';
 import './home.scss';
 
 function Home() {
+  //change routes back for testing
   const {
     data: { posts },
   } = useMatch();
 
   return (
-    <div className='main ml-7 mr-7 md:mr-0'>
+    <div>
       <NavBar />
-      <div className='images_container'>
-        {posts.data.map((image, index) => (
-          <Card image={image} key={index} />
-        ))}
+      <div>
+        <ul className='images_container'>
+          {posts.data.map((image, index) => (
+            <Card image={image} key={index} />
+          ))}
+        </ul>
       </div>
     </div>
   );

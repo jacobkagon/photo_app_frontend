@@ -4,16 +4,14 @@
 }
 
 .images_container {
-  padding-top: 70px;
-
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  row-gap: 20px;
-  column-gap: 1px;
+  padding: 0 4px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 15px;
+  margin-top: 5rem;
 
-  @media (min-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: row;
     row-gap: 50px;
   }

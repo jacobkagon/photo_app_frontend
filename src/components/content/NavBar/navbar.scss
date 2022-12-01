@@ -1,26 +1,30 @@
 nav {
   &.primary-navigation {
+    flex-direction: flex;
     margin: 0 auto;
     display: block;
     background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     z-index: 1;
 
     ul li {
       overflow: visible;
       list-style: none;
-      margin: 0 auto;
-      font-size: 1.2rem;
-
+      font-size: 1.1rem;
       display: inline-block;
       padding: 0.5rem;
       position: relative;
       text-decoration: none;
       text-align: center;
-      font-family: arvo;
+      font-family: 'font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif';
+      margin-left: 2rem;
+      justify-content: space-between;
     }
 
     li a {

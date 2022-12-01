@@ -1,41 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from 'react';
 
 import './navbar.scss';
 
 function NavBar() {
-  const [categoryList, setCategoryList] = useState([]);
-  const fetchCategories = () => {
-    fetch('https://don-photo-app-backend.herokuapp.com/api/v1/categories').then(
-      (resp) => resp.json().then((data) => setCategoryList(data))
-    );
-  };
   return (
-    <nav role='navigation' className='primary-navigation'>
-      <ul>
-        <li>
-          <a href='/'>Home</a>
-        </li>
-        <li>
-          <a onMouseOver={fetchCategories} onFocus href='#'>
-            Photography
-          </a>
+    <div>
+      <nav role='navigation' className='primary-navigation'>
+        <ul className='align-navbar'>
+          <li className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
+            <a href='/'>Home</a>
+          </li>
 
-          <ul className='dropdown'>
-            {categoryList
-              ? categoryList.map((category, index) => (
-                  <li key={index}>
-                    <a href='#'>{category.name}</a>
-                  </li>
-                ))
-              : null}
-          </ul>
-        </li>
-        <li>
-          <a href='about'>About</a>
-        </li>
-      </ul>
-    </nav>
+          <li className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
+            <a href='about'>About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
