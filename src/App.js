@@ -16,10 +16,6 @@ function App() {
 
   const location = new ReactLocation();
 
-  // function updatePosts(post) {
-  //   setPosts([...posts, post]);
-  // }
-
   async function fetchPosts() {
     await new Promise((r) => setTimeout(r, 300));
     return await axios.get(
