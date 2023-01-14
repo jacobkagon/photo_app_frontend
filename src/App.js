@@ -4,16 +4,19 @@
 import { ReactLocation, Router } from '@tanstack/react-location';
 import axios from 'axios';
 
-import About from 'components/content/About/About';
+// import About from 'components/content/About/About';
 //import Admin from 'components/content/Admin';
-import Home from 'components/content/Home/Home';
+// import Home from 'components/content/Home/Home';
+import 'App.css';
+import 'App.css';
 
-import 'App.css';
-import 'App.css';
+import About from './components/Content/about/About';
+import Admin from './components/Content/admin/Admin';
+// import Home from 'components/content/Home/Home';
+import Home from './components/Content/home/Home';
 
 function App() {
   //const [posts, setPosts] = useState([]);
-
   const location = new ReactLocation();
 
   async function fetchPosts() {
@@ -36,7 +39,7 @@ function App() {
             };
           },
         },
-        //{ path: '/admin', element: <Admin updatePosts={updatePosts} /> },
+        { path: '/admin', element: <Admin /> },
         { path: 'about', element: <About /> },
       ]}
     />
