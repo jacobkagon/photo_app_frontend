@@ -1,11 +1,9 @@
 import { useEffect, useRef } from 'react';
-
 const UploadForm = () => {
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
   useEffect(() => {
     cloudinaryRef.current = window.cloudinary;
-    console.log(cloudinaryRef.current);
     console.log('hi');
 
     widgetRef.current = cloudinaryRef.current.createUploadWidget(
