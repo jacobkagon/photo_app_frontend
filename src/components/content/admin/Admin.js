@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import NavBar from 'components/Content/navBar/NavBar';
+// import NavBar from 'components/Content/navBar/NavBar';
+import NavBar from 'components/content/NavBar/NavBar';
 import Form from 'components/form/Form';
 import UserForm from 'components/form/UserForm';
 
