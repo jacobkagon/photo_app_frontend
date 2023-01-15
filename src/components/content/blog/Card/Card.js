@@ -7,7 +7,7 @@ function Card(props) {
   const { photo_id } = props;
 
   const cld = new CloudinaryImage(photo_id, {
-    cloudName: process.env.REACT_APP_CLOUD_NAME,
+    cloudName: 'dcqo0ndth',
   }).resize(fill().width(275).height(275));
 
   return (
