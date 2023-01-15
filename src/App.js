@@ -3,7 +3,7 @@
 import { ReactLocation, Router } from '@tanstack/react-location';
 
 import About from 'components/content/About/About';
-import Admin from 'components/content/Admin';
+import Admin from 'components/content/Admin/Admin';
 import Home from 'components/content/Home/Home';
 
 import 'App.css';
