@@ -1,25 +1,27 @@
-import { useMatch } from '@tanstack/react-location';
-
 import Card from 'components/content/blog/Card/Card';
+// import Card from '../blog/card/Card';
+// import NavBar from '../navBar/NavBar';
 import NavBar from 'components/content/NavBar/NavBar';
 
 import './home.scss';
 
 function Home() {
-  //change routes back for testing
-  const {
-    data: { posts },
-  } = useMatch();
+  const photoIds = [
+    'docs',
+    'sample',
+    'sample1',
+    'v35lstx123xkthlj2pv3',
+    'hb8kv0odidgfg2mr7d7k',
+    'dg2rlkuapo1w7lcjfajp',
+  ].reverse();
 
   return (
     <div>
       <NavBar />
-      <div>
-        <ul className='images_container'>
-          {posts.data.map((image, index) => (
-            <Card image={image} key={index} />
-          ))}
-        </ul>
+      <div className='row'>
+        {photoIds.map((photo_id, index) => (
+          <Card photo_id={photo_id} key={index} />
+        ))}
       </div>
     </div>
   );
