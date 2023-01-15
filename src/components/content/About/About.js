@@ -1,7 +1,8 @@
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 
-import NavBar from '../navBar/NavBar';
+// import NavBar from '../navBar/NavBar';
+import NavBar from 'components/content/NavBar/NavBar';
 
 function About() {
   return (
