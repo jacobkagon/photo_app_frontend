@@ -5,6 +5,8 @@ import NavBar from 'components/content/NavBar/NavBar';
 import Form from 'components/form/Form';
 import UserForm from 'components/form/UserForm';
 
+import './admin.scss';
+
 function Admin(props) {
   const { updatePosts } = props;
 
@@ -13,7 +15,7 @@ function Admin(props) {
 
   const passwordMatch = (e) => {
     e.preventDefault();
-    if (input === process.env.REACT_APP_SECRET_CODE) {
+    if (input == process.env.REACT_APP_SECRET_CODE) {
       localStorage.setItem('admin', true);
       setValidPassword(true);
     } else {
@@ -24,11 +26,13 @@ function Admin(props) {
   return (
     <div>
       <NavBar />
-      {localStorage.getItem('admin') === 'true' ? (
-        <Form updatePosts={updatePosts} />
-      ) : (
-        <UserForm setInput={setInput} passwordMatch={passwordMatch} />
-      )}
+      <div className='admin-portal'>
+        {localStorage.getItem('admin') === 'true' ? (
+          <Form updatePosts={updatePosts} />
+        ) : (
+          <UserForm setInput={setInput} passwordMatch={passwordMatch} />
+        )}
+      </div>
     </div>
   );
 }
