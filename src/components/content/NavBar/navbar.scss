@@ -16,13 +16,13 @@ nav {
     ul li {
       overflow: visible;
       list-style: none;
-      font-size: 1.1rem;
       display: inline-block;
+      font-size: large;
       padding: 0.5rem;
       position: relative;
       text-decoration: none;
       text-align: center;
-      font-family: 'font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif';
+      font-family: 'Open Sans';
       margin-left: 2rem;
       justify-content: space-between;
     }
@@ -40,6 +40,7 @@ nav {
     }
 
     ul li ul {
+      font-family: sans-serif;
       visibility: hidden;
       opacity: 0;
       transition: opacity 4000ms;

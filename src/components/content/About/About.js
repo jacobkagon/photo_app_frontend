@@ -1,14 +1,14 @@
 import { FaFacebook } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 
-// import NavBar from '../navBar/NavBar';
+//import NavBar from '../navBar/NavBar';
 import NavBar from 'components/content/NavBar/NavBar';
 
 function About() {
   return (
-    <div className='ml-20 mr-20 mt-30'>
+    <div className='mt-30'>
       <NavBar />
-      <div className='pt-20'>
+      <div className='pt-20 ml-10 mr-10'>
         <h1 className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
           About Me
         </h1>
