@@ -1,9 +1,10 @@
 import Card from 'components/content/blog/Card/Card';
-// import Card from '../blog/card/Card';
-// import NavBar from '../navBar/NavBar';
 import NavBar from 'components/content/NavBar/NavBar';
 
 import './home.scss';
+
+// import Card from '../blog/card/Card';
+// import NavBar from '../navBar/NavBar';
 
 function Home() {
   const photoIds = [
@@ -14,7 +15,6 @@ function Home() {
     'hb8kv0odidgfg2mr7d7k',
     'dg2rlkuapo1w7lcjfajp',
   ].reverse();
-
   return (
     <div>
       <NavBar />

@@ -1,0 +1,12 @@
+.card-image {
+  width: 27.5rem;
+  height: 16.625rem;
+  vertical-align: bottom;
+  @media (max-width: 500px) {
+    // height: 100px;
+    // width: 200px;
+    // width: 1000px;
+    width: 14rem;
+    height: 16rem;
+  }
+}

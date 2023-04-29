@@ -1,8 +1,9 @@
-import { FaFacebook } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-
+// import { FaFacebook } from 'react-icons/fa';
+// import { FaInstagram } from 'react-icons/fa';
 //import NavBar from '../navBar/NavBar';
 import NavBar from 'components/content/NavBar/NavBar';
+
+import './About.scss';
 
 function About() {
   return (
@@ -12,9 +13,9 @@ function About() {
         <h1 className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
           About Me
         </h1>
-        <div className='pr-4 text-xl leading-6 prose text-gray-600 mb-9'>
-          <div className='float-right w-36 md:w-52'>
-            <img alt='' src='/images/don_ashbrook.jpg' />
+        <div className='pr-4 text-xl leading-6 prose text-white mb-9'>
+          <div className='float-right m-2 w-36 md:w-52'>
+            <img className='card-image' alt='' src='/images/don_ashbrook.jpg' />
           </div>
           <p>
             Hi, I&apos;m Don. I am an avid photographer from Southern California
@@ -36,24 +37,9 @@ function About() {
           </p>
         </div>
       </div>
-      <h3 className='mt-12 text-xl text-gray-600'>Let&apos;s Connect!</h3>
+      <h3 className='mt-12 text-xl text-white'>Let&apos;s Connect!</h3>
       <div className='flex flex-wrap gap-y-4 gap-x-8'>
-        <div className='inline-flex flex-wrap items-center mt-5 gap-y-4 gap-x-8 w-36'>
-          <a
-            href='https://www.instagram.com/photodoc_e2.1/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaInstagram className='w-10 h-10' />
-          </a>
-          <a
-            href=' https://www.facebook.com/don.ashbrook'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaFacebook className='w-10 h-10' />
-          </a>
-        </div>
+        <div className='inline-flex flex-wrap items-center mt-5 gap-y-4 gap-x-8 w-36'></div>
       </div>
     </div>
   );

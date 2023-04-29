@@ -1,18 +1,18 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import './navbar.scss';
 
 function NavBar() {
   return (
     <div>
       <nav role='navigation' className='primary-navigation'>
-        <ul className='align-navbar'>
-          <li className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
-            <a href='/'>Home</a>
+        <ul>
+          <li className='pb-6 text-3xl font-bold tracking-tight md:text-5xl'>
+            <a href='/'>Photos</a>
           </li>
 
-          <li className='pb-6 text-3xl font-bold tracking-tight text-black md:text-5xl'>
-            <a href='about'>About</a>
+          <li className='pb-6 text-3xl font-bold tracking-tight md:text-5xl'>
+            <a className='text-gray-600' href='about'>
+              About
+            </a>
           </li>
         </ul>
       </nav>
