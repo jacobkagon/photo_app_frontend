@@ -1,9 +1,10 @@
 nav {
   &.primary-navigation {
+    background-color: black;
     flex-direction: flex;
     margin: 0 auto;
     display: block;
-    background-color: white;
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -14,21 +15,25 @@ nav {
     z-index: 1;
 
     ul li {
+      color: white;
       overflow: visible;
       list-style: none;
       display: inline-block;
       font-size: large;
       padding: 0.5rem;
       position: relative;
-      text-decoration: none;
+
       text-align: center;
-      font-family: 'Open Sans';
+      // font-family: 'Montserrat';
+      letter-spacing: -0.025em;
       margin-left: 2rem;
       justify-content: space-between;
+      // font-size: 1.875rem/* 30px */;
+      // line-height: 2.25rem/* 36px */;
     }
 
     li a {
-      color: black;
+      color: white;
     }
 
     li a:hover {
@@ -49,7 +54,6 @@ nav {
       padding-left: 0;
       left: 0;
       display: none;
-      background: white;
     }
 
     ul li:hover > ul,

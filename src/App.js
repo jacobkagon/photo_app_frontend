@@ -1,20 +1,16 @@
-//import { useState } from 'react';
-
 import { ReactLocation, Router } from '@tanstack/react-location';
 
-import About from 'components/content/About/About';
 import Admin from 'components/content/admin/Admin';
+// import Admin from './components/Content/admin/Admin';
 import Home from 'components/content/Home/Home';
 
 import 'App.css';
 
-// import About from './components/Content/about/About';
-// import Admin from './components/Content/admin/Admin';
-// import Home from 'components/content/Home/Home';
+import About from './components/Content/about/About';
+import Photo from './components/Content/blog/card/Photo';
 // import Home from './components/Content/home/Home';
 
 function App() {
-  //const [posts, setPosts] = useState([]);
   const location = new ReactLocation();
 
   return (
@@ -29,7 +25,8 @@ function App() {
           },
         },
         { path: '/admin', element: <Admin /> },
-        { path: 'about', element: <About /> },
+        { path: '/about', element: <About /> },
+        { path: '/photo', element: <Photo /> },
       ]}
     />
   );

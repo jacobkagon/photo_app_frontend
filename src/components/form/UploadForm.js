@@ -4,7 +4,6 @@ const UploadForm = () => {
   const widgetRef = useRef();
   useEffect(() => {
     cloudinaryRef.current = window.cloudinary;
-    console.log('hi');
 
     widgetRef.current = cloudinaryRef.current.createUploadWidget(
       {
