@@ -1,6 +1,6 @@
 import { ReactLocation, Router } from '@tanstack/react-location';
-import About from 'Aboutcomponents/content/About/About';
 
+import About from 'components/content/About/About';
 import Admin from 'components/content/admin/Admin';
 // import Admin from './components/Content/admin/Admin';
 import Home from 'components/content/Home/Home';
@@ -8,7 +8,7 @@ import Home from 'components/content/Home/Home';
 import 'App.css';
 
 // import About from './components/Content/about/About';
-import Photo from './components/Content/blog/card/Photo';
+import Photo from '.components/Content/blog/card/Photo';
 // import Home from './components/Content/home/Home';
 
 function App() {
