@@ -1,3 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 4;
+  font: inherit;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-700);
+}
+
 .App {
   text-align: center;
 }

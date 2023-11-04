@@ -4,13 +4,17 @@ function NavBar() {
   return (
     <div>
       <nav role='navigation' className='primary-navigation'>
+        <h1 className='navbar-headers'>Don Ashbrook</h1>
+        <h2>Photography</h2>
         <ul>
-          <li className='pb-6 text-3xl font-bold tracking-tight md:text-5xl'>
-            <a href='/'>Photos</a>
+          <li>
+            <a className='navbar-text' href='/'>
+              Photos
+            </a>
           </li>
 
-          <li className='pb-6 text-3xl font-bold tracking-tight md:text-5xl'>
-            <a className='text-gray-600' href='about'>
+          <li>
+            <a className='navbar-text' href='about'>
               About
             </a>
           </li>
